@@ -12,6 +12,7 @@ public class Configuracion {
     private final  String PROPS_FILE = "configuracion.properties";
     private static Configuracion conf;
 //    private  String URL_RNE;
+    private String AUDIO_FOLDER;
     
     private Configuracion() throws IOException{
         //Cargamos el fichero de configuracion del entorno correspondiente.
@@ -21,6 +22,7 @@ public class Configuracion {
         //Obtenemos la variables de configuracion del fichero.
         
 //        URL_RNE = pros.getProperty("URL_RNE");
+          AUDIO_FOLDER = pros.getProperty("AUDIO_FOLDER");
     }
     
     public static Configuracion get() throws IOException{
@@ -35,5 +37,9 @@ public class Configuracion {
 //    public String URL_RNE(){
 //        return URL_RNE;
 //    }
+    
+    public String AUDIO_FOLDER(){
+        return this.AUDIO_FOLDER;
+    }
 
 }
